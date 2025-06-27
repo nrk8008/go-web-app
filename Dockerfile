@@ -6,7 +6,7 @@
 # This is the Dockerfile that we will use to build the image and run the container
 
 #start with the base image
-FROM golang:1.21 as base
+FROM golang:1.22.5 as base
 
 #set the working directory in the container
 WORKDIR /app 
@@ -15,10 +15,10 @@ WORKDIR /app
 COPY go.mod ./
 
 #Download all the dependencies
-RUN go mod Download
+RUN go mod download
 
 #copy the source code to the working directory
-COPY ..
+COPY . .
 
 #Build the application
 RUN go build -o main .
