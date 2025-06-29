@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: nrk8008/go-web-app:v1
+        image: nrk8008/go-web-app:{{ .Values.image.tag }}
         ports:
         - containerPort: 8080
