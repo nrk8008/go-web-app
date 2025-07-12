@@ -3,7 +3,6 @@
 #stage 2: build distroless image with reduced size. 
 
 # containerize the go application that we have created
-# This is the Dockerfile that we will use to build the image and run the container
 
 #start with the base image
 FROM golang:1.22.5 as base
